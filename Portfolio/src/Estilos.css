@@ -1,0 +1,511 @@
+/* ========================================
+   ESTILOS GLOBAIS
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ========================================
+   CORPO E ESTILOS DE TEMA
+   ======================================== */
+
+body {
+    background: #0e0e0e;
+    color: white;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
+        linear-gradient(315deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%);
+    background-size: 100px 100px;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+}
+
+body.light {
+    background: #ffffff;
+    color: #000000;
+}
+
+body.light::before {
+    opacity: 0;
+}
+
+body.light,
+body.light * {
+    color: #000 !important;
+    transition: color 0.5s ease;
+}
+
+body.light .circulo {
+    background: #ff2a2a;
+}
+
+/* ========================================
+   BOTÃO DE ALTERNÂNCIA DE TEMA
+   ======================================== */
+
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background: #ff2a2a;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.5s ease, color 0.5s ease;
+
+}
+
+body.light .theme-toggle {
+    background: #000;
+    color: #fff !important;
+}
+
+/* ========================================
+   CONTAINER E SEÇÕES
+   ======================================== */
+
+.container {
+    width: 100%;
+}
+
+.secao {
+    min-height: 100vh;
+    padding: 80px 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ========================================
+   SESSÃO INTRODUÇÃO
+   ======================================== */
+
+.texto-grande {
+     font-family: "Climate Crisis", sans-serif;
+    position: absolute;
+    font-size: 150px;
+    font-weight: 900;
+    color: #ff2a2a;
+    opacity: 0.9;
+    top: 20%;
+    left: 5%;
+}
+
+.intro-img {
+    width: 700px;
+    z-index: 2;
+}
+
+.intro-info {
+    position: absolute;
+    bottom: 50px;
+    left: 10%;
+}
+
+.pequeno {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.descricao {
+    max-width: 300px;
+}
+
+
+/* ========================================
+   ESTILOS COMPARTILHADOS DE TEXTO E CONTEÚDO
+   ======================================== */
+
+.sobre,
+.educacao {
+    display: flex;
+    gap: 60px;
+}
+
+.texto h2 {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.texto p {
+    margin-top: 20px;
+    opacity: 0.7;
+    max-width: 550px;
+}
+
+
+/* ========================================
+   ESTILOS DE IMAGEM E ANIMAÇÃO
+   ======================================== */
+
+/* Imagens Sobre */
+#bloco-imagem {
+    position: relative;
+    perspective: 1000px;
+}
+
+#bloco-imagem img {
+    width: 460px;
+    transition: 0.5s;
+    transform: rotateY(15deg) rotateX(-5deg) rotatez(3deg);
+    z-index: 2;
+}
+
+#bloco2 {
+    width: 400px;
+    z-index: 2;
+}
+
+#Sobre-img {
+    position: relative;
+}
+
+#Sobre-img img {
+    animation: sob-tre 4s ease-in-out infinite;
+    filter: brightness(75%);
+    width: 360px;
+    z-index: 2;
+}
+
+@keyframes sob-tre {
+
+    0%,
+    100% {
+        transform: rotate(10deg) scale(1.1) translate(0, 0);
+    }
+
+    20% {
+        transform: rotate(10deg) scale(1.1) translate(2px, -2px);
+    }
+
+    40% {
+        transform: rotate(10deg) scale(1.1) translate(-2px, 2px);
+    }
+
+    60% {
+        transform: rotate(10deg) scale(1.1) translate(1px, 1px);
+    }
+
+    80% {
+        transform: rotate(10deg) scale(1.1) translate(-1px, -1px);
+    }
+}
+
+/* Imagens Educação */
+#Educacao-img {
+    position: relative;
+}
+
+#Educacao-img img {
+    animation: edu-tre 4s ease-in-out infinite;
+    filter: brightness(75%);
+    width: 360px;
+    z-index: 2;
+}
+
+@keyframes edu-tre {
+
+    0%,
+    100% {
+        transform: rotate(-10deg) scale(1.1) translate(0, 0);
+    }
+
+    20% {
+        transform: rotate(-10deg) scale(1.1) translate(2px, -2px);
+    }
+
+    40% {
+        transform: rotate(-10deg) scale(1.1) translate(-2px, 2px);
+    }
+
+    60% {
+        transform: rotate(-10deg) scale(1.1) translate(1px, 1px);
+    }
+
+    80% {
+        transform: rotate(-10deg) scale(1.1) translate(-1px, -1px);
+    }
+}
+
+/* Decoração de círculo */
+.circulo {
+    width: 220px;
+    height: 210px;
+    background: #ff2a2a;
+    border-radius: 50%;
+    position: absolute;
+    left: -80px;
+    bottom: -80px;
+    z-index: 3;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    animation: tremor 3s ease-in-out infinite;
+}
+
+@keyframes tremor {
+
+    0%,
+    100% {
+        transform: rotate(10deg) scale(1.1) translate(0, 0);
+    }
+
+    20% {
+        transform: rotate(10deg) scale(1.1) translate(2px, -2px);
+    }
+
+    40% {
+        transform: rotate(10deg) scale(1.1) translate(-2px, 2px);
+    }
+
+    60% {
+        transform: rotate(10deg) scale(1.1) translate(1px, 1px);
+    }
+
+    80% {
+        transform: rotate(10deg) scale(1.1) translate(-1px, -1px);
+    }
+}
+
+
+/* ========================================
+   SESSÃO EDUCAÇÃO
+   ======================================== */
+
+.item-educacao {
+    margin-top: 20px;
+}
+
+.item-educacao span {
+    display: block;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+#tech-icons {
+    margin-top: 25px;
+}
+
+#tech-icons i {
+
+    font-size: 45px;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+
+/* ========================================
+   SESSÃO TRABALHOS
+   ======================================== */
+
+.trabalhos-container {
+    display: flex;
+    max-height: 130vh;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.titulo-Top {
+    justify-content: center;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+
+body.light .titulo-Top {
+    color: #000;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* LADO ESQUERDO */
+.trabalhos-esquerda {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+
+
+.trabalhos-esquerda img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+.imagem-trabalho .visivel {
+    width: 350px;
+    border-radius: 20px;
+
+    opacity: 0;
+    transform: scale(0.96);
+
+    transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.imagem-trabalho {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.logo-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 4px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* LADO DIREITO */
+
+
+.trabalhos-direita {
+    flex: 1;
+    padding: 60px;
+}
+
+.item-trabalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s, border-color 0.3s;
+}
+
+
+body.light .item-trabalho {
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+
+.item-trabalho:hover {
+    transform: translateX(10px);
+    opacity: 0.7;
+
+}
+
+body.light .item-trabalho:hover {
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s, border-color 0.3s;
+    transform: translateX(10px);
+    opacity: 0.7;
+}
+
+.funcao {
+    opacity: 0.6;
+    background: #333;
+    border-radius: 20px;
+    width: 120px;
+    text-align: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .trabalhos-container {
+        flex-direction: column;
+    }
+
+    .trabalhos-direita {
+        padding: 30px;
+    }
+}
+
+/* ========================================
+   SESSÃO CONTATOS
+   ======================================== */
+.contato .texto {
+    max-width: 600px;
+}
+
+.contato h2 {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.icon-list {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.icon-list a {
+    font-size: 48px;
+    color: inherit;
+    transition: transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.icon-list a:hover {
+    transform: scale(1.1);
+}
+
+#Numero i {
+    margin-top: 20px;
+    font-size: 48px;
+    transition: transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Numero span {
+    font-size: 20px;
+    transition: transform 0.2s;
+    margin-top: -40px;
+    margin-left: 60px;
+    display: flex;
+
+}
+
+.contato p {
+    margin-top: 20px;
+    opacity: 0.8;
+}
