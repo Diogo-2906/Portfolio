@@ -26,9 +26,21 @@ export default function App() {
   return (
     <div className="container">
       {/* Botão de alternância de tema */}
-      <button className="theme-toggle" onClick={toggleTheme}>
-        {lightMode ? "⏾" : "☀︎"}
+      <button
+        className={`theme-toggle ${lightMode ? "active" : ""}`}
+        onClick={toggleTheme}
+      >
+        <div className="circle"></div>
+
+        <span className="icon">
+          {lightMode ? (
+            <i className="bi bi-sun-fill"></i>
+          ) : (
+            <i className="bi bi-moon-fill"></i>
+          )}
+        </span>
       </button>
+
 
       {/* Seções principais */}
       <Intro />
