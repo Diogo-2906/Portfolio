@@ -1,0 +1,98 @@
+.texto-grande {
+    font-family: "Climate Crisis", sans-serif;
+    position: absolute;
+    font-size: 150px;
+    font-weight: 900;
+    color: #9a8b84;
+    top: 20%;
+    left: 5%;
+    z-index: 0;
+}
+
+.intro-info {
+    position: absolute;
+    bottom: 50px;
+    left: 10%;
+}
+
+#intro-img {
+    margin-bottom: 25px;
+}
+
+#bloco-intro {
+    position: relative;
+    z-index: 1;
+}
+
+#bloco-intro img {
+    width: 350px;
+    transition: 0.5s;
+    border-radius: 40px;
+}
+
+.pequeno {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.descricao {
+    max-width: 300px;
+}
+
+/* ========================================
+   RESPONSIVO INTRO
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .texto-grande {
+        font-size: 110px;
+    }
+
+    #bloco-intro img {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .secao.intro {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 80px;
+        min-height: 100vh;
+        gap: 20px;
+    }
+
+    .texto-grande {
+        font-size: 64px;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+
+    #bloco-intro img {
+        width: 220px;
+    }
+
+    .intro-info {
+        position: static;
+        text-align: center;
+    }
+
+    .descricao {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-grande {
+        font-size: 48px;
+    }
+
+    #bloco-intro img {
+        width: 180px;
+        border-radius: 24px;
+    }
+}

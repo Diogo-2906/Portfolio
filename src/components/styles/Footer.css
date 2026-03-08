@@ -6,9 +6,19 @@ body.light .footer {
     text-align: center;
     padding: 40px 10%;
     border-top: 1px solid rgba(255, 255, 255, 0.304);
-
 }
 
 .footer p:first-child {
     margin-bottom: 10px;
+}
+
+/* ========================================
+   RESPONSIVO FOOTER
+   ======================================== */
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 5%;
+        font-size: 14px;
+    }
 }

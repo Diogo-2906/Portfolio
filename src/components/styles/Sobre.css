@@ -1,0 +1,62 @@
+#bloco-sobre {
+    width: 400px;
+    border-radius: 30px;
+    z-index: 2;
+}
+
+#Sobre-img {
+    position: relative;
+}
+
+#Sobre-img img {
+    animation: sob-tre 4s ease-in-out infinite;
+    filter: brightness(70%);
+    width: 360px;
+    z-index: 2;
+}
+
+@keyframes sob-tre {
+    0%, 100% { transform: rotate(10deg) scale(1.1) translate(0, 0); }
+    20% { transform: rotate(10deg) scale(1.1) translate(2px, -2px); }
+    40% { transform: rotate(10deg) scale(1.1) translate(-2px, 2px); }
+    60% { transform: rotate(10deg) scale(1.1) translate(1px, 1px); }
+    80% { transform: rotate(10deg) scale(1.1) translate(-1px, -1px); }
+}
+
+/* ========================================
+   RESPONSIVO SOBRE
+   ======================================== */
+
+@media (max-width: 1024px) {
+    #Sobre-img img,
+    #bloco-sobre {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .secao.sobre {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding-top: 80px;
+        min-height: auto;
+        gap: 60px;
+    }
+
+    #Sobre-img img,
+    #bloco-sobre {
+        width: 220px;
+    }
+
+    #Sobre-img {
+        margin: 30px auto 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #Sobre-img img,
+    #bloco-sobre {
+        width: 180px;
+    }
+}

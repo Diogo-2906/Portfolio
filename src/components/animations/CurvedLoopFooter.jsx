@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState, useMemo, useId } from 'react';
-import "../Components-styles/CurvedLoop.css";
+import "../styles/CurvedLoop.css";
 
-const CurvedLoop = ({
+const CurvedLoopFooter = ({
       marqueeText = '',
       speed = 1.5,
       className,
@@ -106,14 +106,14 @@ const CurvedLoop = ({
 
       return (
             <div
-                  className="curved-loop-jacket"
+                  className="curved-loop-jacket-footer"
                   style={{ visibility: ready ? 'visible' : 'hidden', cursor: cursorStyle }}
                   onPointerDown={onPointerDown}
                   onPointerMove={onPointerMove}
                   onPointerUp={endDrag}
                   onPointerLeave={endDrag}
             >
-                  <svg className="curved-loop-svg" viewBox="0 0 1440 120">
+                  <svg className="curved-loop-svg-footer" viewBox="0 0 1440 120">
                         <text ref={measureRef} xmlSpace="preserve" style={{ visibility: 'hidden', opacity: 0, pointerEvents: 'none' }}>
                               {text}
                         </text>
@@ -132,4 +132,4 @@ const CurvedLoop = ({
       );
 };
 
-export default CurvedLoop;
+export default CurvedLoopFooter;

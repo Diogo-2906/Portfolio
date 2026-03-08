@@ -1,5 +1,4 @@
-import { FaCss3Alt } from "react-icons/fa";
-import "../Components-styles/Educacao.css"
+import "../styles/Educacao.css";
 
 export default function Educacao() {
   return (
@@ -28,7 +27,6 @@ export default function Educacao() {
             <i className="devicon-csharp-plain colored"></i>
             <i className="devicon-react-original colored"></i>
           </div>
-
         </div>
       </div>
     </section>

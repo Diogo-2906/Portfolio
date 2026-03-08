@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import "../Components-styles/Contato.css"
+import "../styles/Contato.css";
 
 export default function Contatos() {
     const form = useRef();
@@ -40,62 +40,43 @@ export default function Contatos() {
                     placeholder="Seu nome"
                     required
                 />
-
                 <input
                     type="email"
                     name="user_email"
                     placeholder="Seu email"
                     required
                 />
-
                 <textarea
                     name="message"
                     placeholder="Digite sua mensagem"
                     required
                 />
-
                 <button type="submit">Enviar Mensagem</button>
             </form>
 
             {/* REDES SOCIAIS */}
             <div className="icon-list">
                 <a href="https://www.instagram.com/di_ogooh/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Instagram">
+                    target="_blank" rel="noopener noreferrer" title="Instagram">
                     <i className="bi bi-instagram"></i>
                 </a>
-
                 <a href="https://discord.com/users/670832851750617098"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Discord">
+                    target="_blank" rel="noopener noreferrer" title="Discord">
                     <i className="bi bi-discord"></i>
                 </a>
-
                 <a href="https://wa.me/5514991320960"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="WhatsApp">
+                    target="_blank" rel="noopener noreferrer" title="WhatsApp">
                     <i className="bi bi-whatsapp"></i>
                 </a>
-
                 <a href="https://www.linkedin.com/in/diogo-ozeliero-63b6633b5"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Linkedin">
-                    <i class="bi bi-linkedin"></i>
+                    target="_blank" rel="noopener noreferrer" title="Linkedin">
+                    <i className="bi bi-linkedin"></i>
                 </a>
                 <a href="https://github.com/Diogo-2906"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub">
-                    <i class="bi bi-github"></i>
+                    target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i className="bi bi-github"></i>
                 </a>
-
             </div>
-
-
 
         </section>
     );

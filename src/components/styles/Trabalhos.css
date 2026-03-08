@@ -10,8 +10,8 @@
     text-align: center;
     font-size: 35px;
     margin-bottom: 20px;
+    padding-top: 80px;
 }
-
 
 body.light .titulo-Top {
     color: #000;
@@ -25,28 +25,13 @@ body.light .titulo-Top {
     align-items: center;
     justify-content: center;
     position: relative;
-
 }
-
-
 
 .trabalhos-esquerda img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: opacity 0.4s ease;
-}
-
-.imagem-trabalho .visivel {
-    width: 350px;
-    border-radius: 20px;
-
-    opacity: 0;
-    transform: scale(0.96);
-
-    transition:
-        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .imagem-trabalho {
@@ -59,6 +44,14 @@ body.light .titulo-Top {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.imagem-trabalho.visivel {
+    width: 100%;
+    border-radius: 20px;
+    transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 .logo-texto {
     position: absolute;
     top: 50%;
@@ -69,22 +62,12 @@ body.light .titulo-Top {
     opacity: 0.7;
 }
 
-
 @keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: scale(0.96);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 /* LADO DIREITO */
-
-
 .trabalhos-direita {
     flex: 1;
     padding: 60px;
@@ -99,20 +82,11 @@ body.light .titulo-Top {
     transition: transform 0.3s, opacity 0.3s, border-color 0.3s;
 }
 
-
 body.light .item-trabalho {
     border-bottom-color: rgba(0, 0, 0, 0.2);
 }
 
 .item-trabalho:hover {
-    transform: translateX(10px);
-    opacity: 0.7;
-
-}
-
-body.light .item-trabalho:hover {
-    cursor: pointer;
-    transition: transform 0.3s, opacity 0.3s, border-color 0.3s;
     transform: translateX(10px);
     opacity: 0.7;
 }
@@ -130,13 +104,63 @@ body.light .funcao {
     color: #ffffff !important;
 }
 
-/* RESPONSIVO */
+/* ========================================
+   RESPONSIVO TRABALHOS
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .trabalhos-direita {
+        padding: 40px 30px;
+    }
+
+    .imagem-trabalho.visivel {
+        width: 280px;
+    }
+}
+
 @media (max-width: 768px) {
     .trabalhos-container {
         flex-direction: column;
+        max-height: none;
+    }
+
+    .trabalhos-esquerda {
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .imagem-trabalho {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagem-trabalho.visivel {
+        width: 90%;
+        max-width: 320px;
     }
 
     .trabalhos-direita {
-        padding: 30px;
+        padding: 20px 5%;
+    }
+
+    .item-trabalho:hover {
+        transform: translateX(5px);
+    }
+
+    .titulo-Top {
+        padding-top: 100px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .funcao {
+        width: 90px;
+        font-size: 13px;
+    }
+
+    .trabalhos-direita {
+        padding: 16px 4%;
     }
 }

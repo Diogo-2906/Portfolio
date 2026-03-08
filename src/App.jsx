@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
 
 /* Importar componentes */
-import Intro from "./components-react/Intro";
-import Sobre from "./components-react/Sobre";
-import Educacao from "./components-react/Educacao";
-import Trabalhos from "./components-react/Trabalhos";
-import Contatos from "./components-react/Contatos";
-import Footer from "./components-react/Footer";
-import Navbar from "./components-react/NavBar";
-import CurvedLoop from './Components-animations/CurvedLoop';
-import CurvedLoopFooter from "./Components-animations/CurvedLoopFooter";
+import Intro from "./components/sections/Intro";
+import Sobre from "./components/sections/Sobre";
+import Educacao from "./components/sections/Educacao";
+import Trabalhos from "./components/sections/Trabalhos";
+import Contatos from "./components/sections/Contatos";
+import Footer from "./components/sections/Footer";
+import Navbar from "./components/sections/NavBar";
+import CurvedLoop from "./components/animations/CurvedLoop";
+import CurvedLoopFooter from "./components/animations/CurvedLoopFooter";
+
+/* Estilos globais */
+import "./components/styles/Global.css";
 
 export default function App() {
   const [lightMode, setLightMode] = useState(false);

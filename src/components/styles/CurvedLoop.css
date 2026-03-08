@@ -1,0 +1,70 @@
+.curved-loop-jacket {
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 250px;
+    margin-bottom: -250px;
+}
+
+.curved-loop-svg {
+    user-select: none;
+    width: 100%;
+    overflow: visible;
+    display: block;
+    font-size: 4rem;
+    fill: #9a8b84;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    z-index: 0;
+}
+
+.curved-loop-jacket-footer {
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.curved-loop-svg-footer {
+    user-select: none;
+    width: 100%;
+    overflow: visible;
+    display: block;
+    font-size: 4rem;
+    fill: #9a8b84;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    z-index: 0;
+}
+
+/* ========================================
+   RESPONSIVO CURVED LOOP
+   ======================================== */
+
+@media (max-width: 768px) {
+    .curved-loop-jacket {
+        margin-top: 100px;
+        margin-bottom: -100px;
+    }
+
+    .curved-loop-svg,
+    .curved-loop-svg-footer {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .curved-loop-svg,
+    .curved-loop-svg-footer {
+        font-size: 1.8rem;
+    }
+}
