@@ -1,3 +1,5 @@
+import "../Components-styles/Sobre.css"
+
 export default function Sobre() {
   return (
     <section className="secao sobre">
@@ -14,7 +16,7 @@ export default function Sobre() {
 
       <div id="Sobre-img">
         <div className="circulo"></div>
-        <img src="/imagens/foto-td.png" alt="perfil" id="bloco2" />
+        <img src="/imagens/foto-td.png" alt="perfil" id="bloco-sobre" />
       </div>
     </section>
   );

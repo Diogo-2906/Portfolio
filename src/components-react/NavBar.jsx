@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../Components-styles/NavBar.css"
 
 export default function Navbar({ toggleTheme, lightMode }) {
 const [active, setActive] = useState("inicio");

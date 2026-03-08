@@ -1,11 +1,12 @@
 import { FaCss3Alt } from "react-icons/fa";
+import "../Components-styles/Educacao.css"
 
 export default function Educacao() {
   return (
     <section className="secao educacao">
       <div id="Educacao-img">
         <div className="circulo"></div>
-        <img src="/imagens/foto-td2.png" alt="perfil" id="bloco2" />
+        <img src="/imagens/foto-td2.png" alt="perfil" id="bloco-edu" />
       </div>
 
       <div className="texto">

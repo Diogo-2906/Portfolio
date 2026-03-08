@@ -1,0 +1,14 @@
+body.light .footer {
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 10%;
+    border-top: 1px solid rgba(255, 255, 255, 0.304);
+
+}
+
+.footer p:first-child {
+    margin-bottom: 10px;
+}

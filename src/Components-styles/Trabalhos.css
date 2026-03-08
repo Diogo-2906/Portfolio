@@ -1,0 +1,142 @@
+.trabalhos-container {
+    display: flex;
+    max-height: 130vh;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.titulo-Top {
+    justify-content: center;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+
+body.light .titulo-Top {
+    color: #000;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* LADO ESQUERDO */
+.trabalhos-esquerda {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+
+
+.trabalhos-esquerda img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+.imagem-trabalho .visivel {
+    width: 350px;
+    border-radius: 20px;
+
+    opacity: 0;
+    transform: scale(0.96);
+
+    transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.imagem-trabalho {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.logo-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 4px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* LADO DIREITO */
+
+
+.trabalhos-direita {
+    flex: 1;
+    padding: 60px;
+}
+
+.item-trabalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s, border-color 0.3s;
+}
+
+
+body.light .item-trabalho {
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+
+.item-trabalho:hover {
+    transform: translateX(10px);
+    opacity: 0.7;
+
+}
+
+body.light .item-trabalho:hover {
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s, border-color 0.3s;
+    transform: translateX(10px);
+    opacity: 0.7;
+}
+
+.funcao {
+    opacity: 0.6;
+    background: #333;
+    border-radius: 20px;
+    width: 120px;
+    text-align: center;
+}
+
+body.light .funcao {
+    opacity: 0.6;
+    color: #ffffff !important;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .trabalhos-container {
+        flex-direction: column;
+    }
+
+    .trabalhos-direita {
+        padding: 30px;
+    }
+}

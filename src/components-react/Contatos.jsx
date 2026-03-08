@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import "../Components-styles/Contato.css"
 
 export default function Contatos() {
     const form = useRef();
@@ -85,10 +86,10 @@ export default function Contatos() {
                     title="Linkedin">
                     <i class="bi bi-linkedin"></i>
                 </a>
-                <a href="https://github.com/Diogo-2906" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                title="GitHub">
+                <a href="https://github.com/Diogo-2906"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="GitHub">
                     <i class="bi bi-github"></i>
                 </a>
 

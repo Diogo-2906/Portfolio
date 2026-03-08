@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../Components-styles/Trabalhos.css"
 
 export default function Trabalhos() {
   const trabalhos = [
